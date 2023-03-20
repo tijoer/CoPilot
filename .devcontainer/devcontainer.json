@@ -8,18 +8,28 @@
 	},
 	"vscode": {
 		"extensions": [
-			"GitHub.copilot"
+			"GitHub.copilot",
+			"ms-azuretools.vscode-docker"
 		]
 	}
-  },
-  "portsAttributes": {
-	"3000": {
-		"label": "Application",
-		"onAutoForward": "openPreview"
 	},
-	"8080": {
-		"label": "nginx"
-	}
-},
-  "forwardPorts": [3000]
+	"features": {
+		"rust": {
+		"description": "Rust",
+		"containerImage": "mcr.microsoft.com/vscode/devcontainers/rust:1",
+		"extensions": [
+			"rust-lang.rust"
+		]
+		}
+	},
+	"portsAttributes": {
+		"3000": {
+			"label": "Application",
+			"onAutoForward": "openPreview"
+		},
+		"8080": {
+			"label": "nginx"
+		}
+	},
+	"forwardPorts": [3000]
 }
